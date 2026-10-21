@@ -42,8 +42,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
  
       - name: Build Web with Base URL 
-        # Se envía "yes" por tubería (pipe) para responder afirmativamente a cualquier 
-confirmación interactiva 
+        # Se envía "yes" por tubería (pipe) para responder afirmativamente a cualquier confirmación interactiva 
         run: yes | flet build web --base-url /${{ github.event.repository.name }}/ 
  
       - name: Setup Pages 
